@@ -5,11 +5,9 @@ language: node_js
 node_js:
   - 0.10.25
 
-
 #neo4j runs on default port 7474
 services:
  - neo4j
-
 
 
 # The path for Xunit to output test reports
@@ -24,7 +22,6 @@ before_script:
 # Running the tests with grunt
 script:
   - npm test
-
 
 # Tell istanbul to generate a coverage report
 after_script:
