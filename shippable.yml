@@ -9,7 +9,7 @@ node_js:
 services:
  - neo4j
 
-build_image: shippable/minv2:beta
+#build_image: shippable/minv2:beta
 # The path for Xunit to output test reports
 env:
   - XUNIT_FILE=shippable/testresults/result.xml
