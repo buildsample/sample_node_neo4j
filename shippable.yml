@@ -12,7 +12,9 @@ services:
 #build_image: shippable/minv2:beta
 # The path for Xunit to output test reports
 env:
+  global:
   - XUNIT_FILE=shippable/testresults/result.xml
+  - secure: F+svn907m2DCGdyZUwtUkOzoJpXvHnGXEzlgeGjFes+L36lG8GKNgdfAGc/TZ4B9PTLxdxZu55d9NvEZo/YMnOEaODWIf25Hvvxs/mQwjUtdRQKZ3WAHV/ytt+eR04I9ouaXM8/KB3eJ4UuWmDioScViJM+6YSEb1MLUYn1EslvNBMs93qhQ9BlqXY5JTZugaY4bZ6FaOOn5bN8YsP0Z5PLYWIX+ryBNfUpLVsjT4YlzqRSU2HJWClLV6axStFciBrPaHIY2QvL5uKQQykdIwV56Tz5c4BZGNHYir7l+nDZzfkNJugLTxZ78KQFkDfkQyLOpOaqHOo8rj/BXUQ563g== 
 
 # Create directories for test and coverage reports
 before_script:
@@ -22,6 +24,7 @@ before_script:
 # Running the tests with grunt
 script:
   - npm test
+  - echo $key2
 
 # Tell istanbul to generate a coverage report
 after_script:
