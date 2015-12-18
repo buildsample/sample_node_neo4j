@@ -6,6 +6,9 @@ build_image: drydock/u14nodall:tip
 # Version number
 node_js:
   - 0.10.25
+  - 4.2
+  - 4.0
+  
 
 #neo4j runs on default port 7474
 services:
